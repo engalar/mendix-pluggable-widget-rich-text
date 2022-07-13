@@ -1,12 +1,18 @@
-import { parseStyle } from "./piw-utils-internal";
+import { ReactElement } from "react";
+import RichTextPreviewSVG from "./assets/rich-text-preview-light.svg";
 import { RichTextPreviewProps } from "../typings/RichTextProps";
 
-declare function require(name: string): string;
+export const preview = (props: RichTextPreviewProps): ReactElement => {
+    let doc = decodeURI(RichTextPreviewSVG);
+    doc = props.stringAttribute ? doc.replace("[No attribute selected]", `[${props.stringAttribute}]`) : doc;
 
-export function preview(props: RichTextPreviewProps) {
-    return <div style={parseStyle(props.style)}></div>;
-}
+    return (
+        <div className="widget-rich-text">
+            <img src={doc} alt="" />
+        </div>
+    );
+};
 
 export function getPreviewCss(): string {
-    return require("./ui/index.scss");
+    return require("./ui/RichTextEditorPreview.scss");
 }

@@ -6,7 +6,12 @@
       "jest",
     ],
     "jsx": "react-jsx",
-    "jsxFactory": null
+    "jsxFactory": null,
+    "target": "es6",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
   },
   "exclude": [
     "./src/assets/plugins"
