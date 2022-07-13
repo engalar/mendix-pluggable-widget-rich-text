@@ -1,9 +1,9 @@
 import { parseStyle } from "./piw-utils-internal";
-import { GraphPreviewProps } from "../typings/GraphProps";
+import { RichTextPreviewProps } from "../typings/RichTextProps";
 
 declare function require(name: string): string;
 
-export function preview(props: GraphPreviewProps) {
+export function preview(props: RichTextPreviewProps) {
     return <div style={parseStyle(props.style)}></div>;
 }
 

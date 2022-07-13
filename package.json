@@ -1,13 +1,16 @@
 {
-  "name": "graph",
-  "widgetName": "Graph",
+  "name": "richtext",
+  "widgetName": "RichText",
   "version": "1.1.4",
   "description": "My widget description",
   "packagePath": "mendixcn",
   "author": "wengao.liu@siemens.com",
   "dependencies": {
     "ahooks": "^3.3.10",
-    "classnames": "^2.2.6"
+    "classnames": "^2.2.6",
+    "sanitize-html": "^2.6.0",
+    "ckeditor4-react": "^2.1.0",
+    "ckeditor4": "^4.17.1"
   },
   "scripts": {
     "testProject": "git clone https://gitee.com/engalar/mendix-testproject-960.git --depth=1 ./tests/testProject && shx rm -rf .\\tests\\testProject\\.git",
@@ -48,6 +51,10 @@
     "prettier": "^2.6.2",
     "eslint": "^8.15.0",
     "xml2js": "^0.4.23",
-    "zlib": "^1.0.5"
+    "zlib": "^1.0.5",
+    "@types/sanitize-html": "^1.18.2",
+    "@types/ckeditor4": "^4.16.1",
+    "@rollup/plugin-json": "^4.1.0",
+    "through2": "^4.0.2"
   }
 }
